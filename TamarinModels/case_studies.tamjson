@@ -1,0 +1,29 @@
+{
+    "timeout": 1200,
+    "cores": 4,
+    "log": false,
+    "models" : ["device_attestation.spthy",
+                "attack_refl_preshared_psk.spthy",
+		            "preshared_psk.spthy",
+                "preshared_pk.spthy",
+                "preshared_pk_copy.spthy",
+                "key_exchange.spthy"],
+    "device_attestation.spthy" : {
+      "preprocess_flags" : ["Sanity"]
+      },
+    "attack_refl_preshared_psk.spthy" : {
+      "preprocess_flags" : []
+      },
+    "preshared_psk.spthy" : {
+      "preprocess_flags" : ["Sanity"]
+      },
+    "preshared_pk.spthy" : {
+      "preprocess_flags" : ["auth","Sanity"]
+      },
+    "preshared_pk_copy.spthy" : {
+      "preprocess_flags" : ["fs"]
+      },
+    "key_exchange.spthy" : {
+      "preprocess_flags" : ["Sanity"]
+      }
+}
