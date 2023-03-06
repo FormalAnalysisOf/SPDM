@@ -49,7 +49,13 @@ pip3 install tabulate matplotlib
 
 ------
 
-To run all tamarin models with all lemmas, execute
+To run all tamarin models with all lemmas, 
+
+first make the oracle file executable
+
+`chmod +x oracle`
+
+and then execute
 
 
 `python3 tamarin_wrapper.py -f case_studies.tamjson`
