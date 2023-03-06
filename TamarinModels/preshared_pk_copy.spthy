@@ -1094,7 +1094,20 @@ lemma SamePartnerPerSessionResp[use_induction, hide_lemma=KeyUpdateISecret]:
     ==> (oidI1=oidI2 & oidR1=oidR2 & bsid1=bsid2) )
 " 
 
-
+//Handshake Secrecy Initiator
+lemma secret_major_init_side[reuse,use_induction]:
+" (All sid tid oidI oidR somepkR secret #i.  
+    SesssionMajorSecretInit(sid, tid, oidI, oidR, somepkR, secret)@#i
+    ==> not(Ex #t. K(secret)[+]@t)
+  )
+"
+//Handshake Secrecy Responder
+lemma secret_major_resp_side[reuse,use_induction]:
+" (All sid tid oidI oidR ltkR secret #i.  
+   SesssionMajorSecretResp(sid, tid, oidI, oidR, ltkR, secret)@#i
+    ==> not(Ex #t. K(secret)[+]@t)
+  )
+"
 
 // Proof By Oracle: Solve #i twice
 lemma ForwardSecrecyInitMaster[use_induction, hide_lemma=KeyUpdateISecret, heuristic=o]:
