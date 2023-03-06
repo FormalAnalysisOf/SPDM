@@ -2,7 +2,8 @@
 
 This repository contains all models of the 
 'Formal Analysis of SPDM: Security Protocol and Data Model version 1.2'
-paper
+paper by Cas Cremers, Alexander Dax, and Aurora Naska. The full version
+of the paper can be found on [eprint](https://eprint.iacr.org/2022/1724)
 
 ----------
 
